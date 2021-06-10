@@ -1,0 +1,55 @@
+
+@import "helpers/mixin";
+@import "helpers/variables";
+@import "helpers/function";
+
+@import "_responBt2.scss";
+
+@import "layout/structure";
+@import "layout/header";
+@import "layout/about";
+@import "layout/service";
+@import "layout/portfolio";
+@import "layout/features";
+@import "layout/counter";
+@import "layout/team";
+@import "layout/pricing";
+
+@import "components/carousel";
+@import "components/button";
+
+@import "layout/footer";
+
+@import "pages/contact";
+
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Montserrat", sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #444;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+}

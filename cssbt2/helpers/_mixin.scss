@@ -1,0 +1,162 @@
+@mixin flexCenter($position, $postionSub, $value) {
+    position: #{$position};
+    #{$postionSub}: $value;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+// header
+
+@mixin btnSlider($eml, $left-of-right, $color) {
+    position: absolute;
+    #{$left-of-right}: 50%;
+    color: $color;
+    border: 2px solid $color;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: -1px;
+        right: 0;
+        padding: 1.65rem 0;
+        transition: all 0.5s ease-in-out;
+        z-index: -1;
+        @if $eml == downLoad {
+            width: 0%;
+            background-color: $secondary-color;
+        } @else {
+            width: 100%;
+        }
+    }
+}
+
+@mixin btnCarouselSlider($eml, $style: style) {
+    position: absolute;
+    color: #fff;
+    top: 15vw;
+    transform: translate(-50%, -50%);
+    @if $eml == left {
+        left: 2rem;
+    } @else {
+        right: -2rem;
+    }
+    @if $style == style {
+        font-size: 1.2rem;
+        padding: 2rem;
+        cursor: pointer;
+        margin: 1rem;
+        &:hover i {
+            color: $secondary-color;
+        }
+    }
+}
+
+@mixin animationHeader($name, $from, $to) {
+    @keyframes #{$name} {
+        @if $name == fadeIn {
+            from {
+                transform: scale($from);
+                opacity: 0;
+            }
+            to {
+                transform: scale($to);
+                opacity: 1;
+            }
+        } @else {
+            from {
+                transform: translateY($from);
+                opacity: 0;
+            }
+            to {
+                transform: translateY($to);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@mixin transitionBase($name: hover, $nameTransform: translateY(0), $duration: 0.3s) {
+    @if $name == hover {
+        opacity: 1;
+    } @else {
+        opacity: 0;
+    }
+
+    transform: $nameTransform; //
+    transition: transform $duration cubic-bezier(0.73, 0.09, 0.73, 0.91),
+        opacity $duration cubic-bezier(0.73, 0.09, 0.73, 0.91);
+}
+
+// team
+
+@mixin transitionTeam($name: hover, $nameTransform: opacity(0), $width: 0) {
+    @if $name == hover {
+        opacity: 1;
+    } @else {
+        opacity: 0;
+    }
+    width: $width;
+    transition: transform 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86), width 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+// pricing
+
+@mixin fontPricing($name: sm) {
+    @if $name == sm {
+        font: {
+            size: 0.8rem;
+            weight: 700;
+        }
+    }
+    @if $name == xl {
+        font: {
+            size: 2.8rem;
+            weight: 700;
+        }
+    }
+}
+
+// footer
+
+@mixin listAboutFooter($color) {
+    background-color: $color;
+    border: 1px solid $color;
+    a {
+        color: $white-color;
+    }
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@mixin colorTransitionBase($color : $secondary-color) {
+    color: $color;
+    transition: color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@mixin hideScroll() {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin touchSlider($width: 80%, $gap: 2.5rem, $padding: 1rem) {
+    display: grid !important;
+    justify-content: flex-start !important;
+    grid-template-columns: unset;
+    grid-auto-flow: column;
+    grid-auto-columns: $width;
+    grid-gap: 0 $gap;
+    overflow-x: auto;
+    padding: $padding;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    @include hideScroll;
+
+    & > * {
+        scroll-snap-align: center;
+        width: auto;
+    }
+}

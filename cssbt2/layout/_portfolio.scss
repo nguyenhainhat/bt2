@@ -1,0 +1,106 @@
+.portfolio-list {
+    text-align: center;
+    &_items {
+        text-decoration: none;
+        border: 2px solid $secondary-color;
+        color: #000;
+        font-size: 0.8rem;
+        padding: 0.8rem 2vw;
+        &:hover {
+            background-color: $secondary-color;
+            color: $white-color;
+            transition: all 0.3s cubic-bezier(0.6, 0.6, 0.9, 0.335);
+        }
+    }
+    &_active {
+        background-color: $secondary-color;
+        color: $white-color;
+    }
+}
+
+#portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 4rem;
+    padding: 0;
+    .portfolio-item {
+        box-shadow: 0 0 5px #000;
+        &:hover {
+            &::before {
+                @include transitionBase(hover, scale(1));
+            }
+            .portfolio-item_content {
+                h4 {
+                    @include transitionBase(hover, scale(1));
+                }
+                p {
+                    @include transitionBase(hover);
+                }
+            }
+            .portfolio-item_link {
+                @include transitionBase(hover);
+                transition-delay: 0.1s;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 5%;
+            top: 5%;
+            width: 90%;
+            height: 90%;
+            transform: scale(0.5);
+            opacity: 0;
+            padding: 2rem;
+            background-color: rgba($color: $secondary-color, $alpha: 0.8);
+            transition: transform 0.3s cubic-bezier(0.73, 0.09, 0.73, 0.91),
+                opacity 0.3s cubic-bezier(0.73, 0.09, 0.73, 0.91);
+        }
+
+        &_content {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            text-align: center;
+            color: rgb(247, 238, 238);
+            padding: 0 3rem;
+            h4 {
+                font : {
+                    size: 1rem;
+                    weight: 700;
+                }
+                margin: 0.5rem 0;
+                @include transitionBase(notHover, scale(0.5));
+            }
+            p {
+                font-size: 0.8rem;
+                @include transitionBase(notHover, translateY(40px));
+            }
+        }
+
+        &_link {
+            display: flex;
+            justify-content: center;
+            @include transitionBase(notHover, translateY(-40px));
+            a {
+                width: 42px;
+                color: $white-color;
+                text-decoration: none;
+                margin: 0.2rem;
+                padding: 0.5rem;
+                border-radius: 50%;
+                border: 1px solid $white-color;
+                &:hover {
+                    background-color: $white-color;
+                    color: $secondary-color;
+                }
+            }
+            i {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

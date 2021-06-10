@@ -1,0 +1,126 @@
+#contact {
+    .contact-tilte {
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-form {
+        margin: 1rem 0;
+
+        &_group {
+            position: relative;
+            text-align: center;
+            color: rgba($color: #333, $alpha: 0.8);
+            margin-bottom: 1.8rem;
+            i {
+                position: absolute;
+                top: 50%;
+                transform: translate(0%, -50%);
+                font-size: fontSizeBase();
+                padding: 0rem 1rem;
+            }
+        }
+
+        &_input {
+            width: 100%;
+            padding: 0.5rem 2.5rem;
+            color: rgba($color: #333, $alpha: 0.5);
+            border-radius: 5px;
+            border: transparent;
+            box-shadow: 0 0 5px rgba($color: #333, $alpha: 0.3);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            &:focus {
+                outline: transparent;
+                box-shadow: 0 0 7px $secondary-color;
+                transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+        }
+
+        #message {
+            height: 235px;
+            &::placeholder {
+                color: rgba($color: #333, $alpha: 0.5);
+            }
+        }
+
+        &_btn {
+            position: relative;
+            left: -50%;
+            transform: translate(50%, 0);
+            background-color: $white-color;
+            margin-top: 1.5rem;
+            border: 1px solid $secondary-color;
+            padding: 0.5rem 1.2rem;
+            border-radius: 3px;
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+            a {
+                text-decoration: none;
+                @include colorTransitionBase();
+            }
+
+            &:hover {
+                background-color: $secondary-color;
+                transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                a {
+                    @include colorTransitionBase($white-color);
+                }
+                &:focus {
+                    outline: transparent;
+                }
+            }
+
+            &_help {
+                position: absolute;
+                text-align: left;
+                ul {
+                    list-style: none;
+                    padding: 0rem;
+                    margin-top: 0.5rem;
+                    li {
+                        color: $primary-color;
+                        font-size: fontSizeBase();
+                    }
+                }
+            }
+        }
+    }
+        .contact-inf {
+            padding: 0rem 0.5rem;
+
+            address {
+                font-size: fontSizeBase();
+                margin-bottom: 0.5rem;
+            }
+
+            a {
+                display: block;
+                text-decoration: none;
+                font-size: fontSizeBase();
+                line-height: 2;
+                @include colorTransitionBase(#333);
+                &:hover {
+                    @include colorTransitionBase();
+                }
+            }
+
+            &_tel {
+                margin: 0.2rem 0;
+            }
+
+            ul {
+                padding-left: 0;
+                margin-top: 0.5rem;
+                li {
+                    display: inline-block;
+                    a {
+                        padding: 1rem 1.5rem;
+                        &:nth-last-child(1) {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    
+}

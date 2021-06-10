@@ -1,0 +1,42 @@
+#counter {
+    background-image: url("../img2/testimonial-bg-counter.jpg");
+    background-size: cover;
+    padding: 5rem;
+    .counter-item {
+        text-align: center;
+        color: $white-color;
+        &_content {
+            padding: 4rem 0;
+        }
+
+        &_icon {
+            color: $secondary-color;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        &_value {
+            position: relative;
+            h3 {
+                font: {
+                    weight: 700;
+                    size: 2.8rem;
+                }
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 50%;
+                transform: translate(50%, 50%);
+                width: 25px;
+                height: 30px;
+                border-bottom: 2px solid $white-color;
+            }
+        }
+        &_tilte {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+        }
+    }
+}

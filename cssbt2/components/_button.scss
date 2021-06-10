@@ -1,0 +1,14 @@
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    background-color: $secondary-color;
+    font-size: fontSizeBase(0.4rem);
+    padding: 0.6rem 0.8rem;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.83, 0.58, 0.22, 0.34);
+    @include colorTransitionBase($white-color);
+    &:hover {
+        @include colorTransitionBase(#000);
+    }
+}
