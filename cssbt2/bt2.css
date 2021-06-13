@@ -1223,7 +1223,7 @@
 }
 
 #counter {
-  background-image: url("../img2/testimonial-bg-counter.jpg");
+  background-image: url("./img2/testimonial-bg-counter.jpg");
   background-size: cover;
   padding: 5rem;
 }
@@ -1472,7 +1472,7 @@
 }
 
 #carousel {
-  background-image: url("../img2/carousel-bg.jpg");
+  background-image: url("./img2/carousel-bg.jpg");
   background-size: cover;
   width: 100%;
   overflow: hidden;
