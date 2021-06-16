@@ -162,7 +162,7 @@ function nextSlides() {
         nextAddClassListSlider(textSlider, counter, 'fade')
     }
     nextAddClassListSlider(buttonSlider, counter, 'fadeUp')
-    // setTimeout(nextSlides,3000);
+    setTimeout(nextSlides,3000);
 }
 
 // nextSlides()
