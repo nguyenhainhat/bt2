@@ -1,6 +1,51 @@
-
-
-
+let tlStart = gsap.timeline();
+tlStart
+    .to(".start-one .start-item", {
+        height: 70,
+        duration: 3,
+        ease: "power2.inOut"
+    })
+    .to(".start-widthLoad", {
+        width: 200, 
+        duration: 5,
+        ease: "power2.inOut"
+    }, "-=2")
+    .to(".start-one .start-item", {
+        opacity: 0,
+        duration: 1,
+        ease: "power2.inOut"
+    },"-=1")
+    .to(".start-one", {
+        y: "100%", 
+        duration: 2,
+        ease: "power2.inOut"
+    }, "-=0.5")
+    .to(".start-hello", {
+        height: 39,
+        duration: 2,
+        ease: "power2.inOut"
+    },"-=1")
+    .to(".start-hello", {
+        height: 0,
+        duration: 2,
+        ease: "power2.inOut"
+    })
+    .to(".start-name", {
+        height: 39,
+        duration: 2,
+        ease: "power2.inOut"
+    },"-=0.6")
+    .to(".start-name", {
+        height: 0,
+        duration: 2,
+        ease: "power2.inOut"
+    },"-=0.2")
+    .to(".start-two", {
+        x: "100%", 
+        duration: 2,
+        ease: "power2.inOut"
+    }, "-=0.8")
+   
 
 // services
 let tlServices = gsap.timeline({
@@ -56,7 +101,7 @@ tlPortfolio
             each: 0.2,
             ease: "power2.inOut",
         }
-    }, "-=0.3")
+    }, "-=0.5")
 
 
 // features
