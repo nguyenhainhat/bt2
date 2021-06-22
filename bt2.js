@@ -164,7 +164,7 @@ function nextSlides() {
     nextAddClassListSlider(buttonSlider, counter, 'fadeUp')
     setTimeout(nextSlides,3000);
 }
-// nextSlides()
+nextSlides()
 
 function prevAddClassListSlider(str, counter, classSlider) {
     if (str == buttonSlider) {
