@@ -40,13 +40,14 @@ img {
 
 html {
 	scroll-behavior: smooth;
+	overflow-y: scroll;
 }
 
 body {
+	font-size: 16px;
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 	color: #444;
 	font-family: 'Rubik', sans-serif;
-	font-size: 16px;
 }

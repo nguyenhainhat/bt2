@@ -89,7 +89,7 @@ function autoSlides() {
 	nextSlides();
 	setTimeout(autoSlides, 5000);
 }
-// autoSlides();
+autoSlides();
 
 function prevAddClassListSlider(str, counter, classSlider) {
 	if (str == buttonSlider) {

@@ -10,6 +10,8 @@
 
 .section-padding .section-header h2 {
   font-weight: 700;
+  color: #585b60;
+  font-size: calc(1.5rem + 1.1vw);
   letter-spacing: 2px;
 }
 
@@ -37,7 +39,7 @@
 
 @media screen and (min-width: 993px) {
   .section-padding {
-    padding: 3rem 4rem;
+    padding: 3rem 5rem;
   }
   .section-padding .section-header h4 {
     font-size: 2.5rem;
@@ -607,6 +609,14 @@
   #header-wrap .header-slider .btn-slider {
     margin-block: calc(3rem - 4vw);
   }
+  #header-wrap .header-slider_right {
+    right: -1rem;
+    padding: 1rem;
+  }
+  #header-wrap .header-slider_left {
+    left: 1.5rem;
+    padding: 1rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -758,7 +768,8 @@
   #header-wrap .header-slider_caption .btn-slider {
     padding-block: 2.2rem;
   }
-  #header-wrap .header-slider_caption .btn-learnMore, #header-wrap .header-slider_caption .btn-downLoad {
+  #header-wrap .header-slider_caption .btn-learnMore,
+  #header-wrap .header-slider_caption .btn-downLoad {
     bottom: -5%;
   }
   #header-wrap .header-slider_auto {
@@ -782,6 +793,8 @@
 }
 
 #about .about-items p {
+  line-height: 1.8;
+  padding: 0 0.2rem;
   font-size: 0.8rem;
 }
 
@@ -813,11 +826,14 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 1rem;
 }
 
 #services .services-items_icon {
-  margin: 0.2rem 1rem 0 0;
+  margin-right: 1rem;
   color: #eb586f;
   width: 40px;
 }
@@ -840,7 +856,7 @@
 
 #services .services-items_content p {
   line-height: 1.8;
-  font-size: 0.8rem;
+  font-size: 0.79rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -872,7 +888,7 @@
 
 @media screen and (min-width: 993px) {
   #services .services-items_icon {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   #services .services-items_content h4 {
     font-size: 1rem;
@@ -1142,7 +1158,7 @@
 
 @media screen and (min-width: 993px) {
   #features .features-item_content {
-    padding: 0px 2vw;
+    padding-inline: 1vw 2vw;
   }
   #features .features-item_content h4 {
     font-size: 1rem;
@@ -2238,15 +2254,16 @@ img {
 
 html {
   scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 body {
+  font-size: 16px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
   margin: 0;
   color: #444;
   font-family: 'Rubik', sans-serif;
-  font-size: 16px;
 }
 /*# sourceMappingURL=bt2.css.map */

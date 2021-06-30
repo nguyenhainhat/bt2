@@ -6,6 +6,8 @@
 		margin-bottom: 4vw;
 		h2 {
 			font-weight: 700;
+			color: #585b60;
+			font-size: calc(1.5rem + 1.1vw);
 			letter-spacing: 2px;
 		}
 	}
@@ -30,7 +32,7 @@
 	}
 
 	@include minWidth(993px) {
-		padding: 3rem 4rem;
+		padding: 3rem 5rem;
 		.section-header {
 			h4 {
 				font-size: 2.5rem;
