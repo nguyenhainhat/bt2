@@ -1,73 +1,121 @@
 #carousel {
-    background-image: url("../img2/carousel-bg.jpg");
-    background-size: cover;
-    width: 100%;
-    overflow: hidden;
-    padding: 60px 0;
+	background-image: url('../img2/carousel-bg.jpg');
+	background-size: cover;
+	width: 100%;
+	overflow: hidden;
+	padding: 60px 0;
 
-    .owl-container {
-        width: 100%;
-        overflow: hidden;
-        scroll-snap-type: x;
-        scroll-snap-type: x mandatory;
-    }
+	.owl-container {
+		width: 100%;
+		overflow: hidden;
+		scroll-snap-type: x;
+		scroll-snap-type: x mandatory;
+	}
 
-    .owl-carousel {
-        height: 226px;
-        &_item {
-            text-align: center;
-            display: inline-block;
-            p {
-                color: $white-color;
-                font-size: 0.8rem;
-            }
-        }
+	.owl-carousel {
+		height: 226px;
+		padding: 0;
+		&_item {
+			text-align: center;
+			display: inline-block;
+			p {
+				color: $white-color;
+				font-size: 0.8rem;
+			}
+		}
 
-        &_img {
-            margin-bottom: 1rem;
-            img {
-                width: 90px;
-                padding: 5px;
-                border-radius: 50%;
-                box-shadow: 0 0 5px #ddd;
-            }
-        }
+		&_img {
+			margin-bottom: 1rem;
+			img {
+				width: 90px;
+				padding: 5px;
+				border-radius: 50%;
+				box-shadow: 0 0 5px #ddd;
+			}
+		}
 
-        &_footer {
-            color: $white-color;
-            a {
-                text-decoration: none;
-                color: $secondary-color;
-            }
-        }
+		&_footer {
+			color: $white-color;
+			a {
+				text-decoration: none;
+				color: $secondary-color;
+			}
+		}
 
-        &_content {
-            width: 100%;
-            overflow: hidden;
-        }
-    }
+		&_content {
+			width: 100%;
+			overflow: hidden;
+		}
+		@include maxWidth(516px) {
+			@include touchSlider(100%, 0, 0);
+			transform: translateX(0) !important;
+			width: auto !important;
+			&_item {
+				&:first-child,
+				&:last-child {
+					display: none !important;
+				}
+			}
+		}
+		@include maxWidth(767px) {
+			height: auto !important;
+			&_item {
+				text-align: center;
+				p {
+					padding: 0 27px;
+				}
+				&:first-child,
+				&:last-child {
+					display: inline-block;
+				}
+			}
+			&-content {
+				width: auto;
+			}
+		}
 
-    .owl-control {
-        &_button {
-            position: relative;
-            top: (370px / (2) - (2 * 16px)) * -1;
-            text-align: center;
-            color: $white-color;
-            cursor: pointer;
-        }
+		@include minMaxWidth(768px, 992px) {
+			width: 696px * 5 + 24px;
+			&_item {
+				width: 696px;
+				p {
+					padding: 0px 2rem;
+				}
+			}
+		}
 
-        &_right {
-            position: absolute;
-            right: 10%;
-            padding: 1rem;
-            margin: 0rem -5.2rem;
-        }
+		@include minWidth(993px) {
+			width: 1116px * 5 + 24px;
+			&_item {
+				width: 1116px;
+				p {
+					padding: 0 3rem;
+				}
+			}
+		}
+	}
 
-        &_left {
-            position: absolute;
-            left: 10%;
-            padding: 1rem;
-            margin: 0rem -5.2rem;
-        }
-    }
+	.owl-control {
+		&_button {
+			position: relative;
+			top: (370px / (2) - (2 * 16px)) * -1;
+			text-align: center;
+			color: $white-color;
+			cursor: pointer;
+		}
+
+		&_right {
+			position: absolute;
+			right: 10%;
+			padding: 1rem;
+			margin: 0rem -5.2rem;
+		}
+
+		&_left {
+			position: absolute;
+			left: 10%;
+			padding: 1rem;
+			margin: 0rem -5.2rem;
+		}
+	}
 }

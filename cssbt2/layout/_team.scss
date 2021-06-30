@@ -1,69 +1,77 @@
 #team {
-    .team-item {
-        position: relative;
-        text-align: center;
+	.team-item {
+		position: relative;
+		text-align: center;
+		margin: 1rem;
+		img {
+			width: 100%;
+		}
 
-        &:hover {
-            .team-item_overlay {
-                @include transitionBase(hover, none, 0.5s);
+		&:hover {
+			.team-item_overlay {
+				@include transitionBase(hover, none, 0.5s);
 
-                h3,
-                p,
-                .team-item_icon {
-                    @include transitionBase(hover, none, 0.5s);
-                }
+				h3,
+				p,
+				.team-item_icon {
+					@include transitionBase(hover, none, 0.5s);
+				}
 
-                .small-divider {
-                    width: 3rem;
-                    @include transitionTeam(hover, opacity(1), 3rem);
-                }
-            }
-        }
+				.small-divider {
+					width: 3rem;
+					@include transitionTeam(hover, opacity(1), 3rem);
+				}
+			}
+		}
 
-        &_overlay {
-            @include flexCenter(absolute, top, 0);
-            @include transitionBase(notHover, none, 0.5s);
-            color: $white-color;
-            width: 100%;
-            height: 100%;
-            background-color: rgba($color: #000, $alpha: 0.8);
-            h3 {
-                font : {
-                    size: 1.3rem;
-                    weight: 700;
-                }
-            }
-            p {
-                font-size: 0.8rem;
-            }
+		&_overlay {
+			@include flexCenter(absolute, top, 0 !important);
+			@include transitionBase(notHover, none, 0.5s);
+			color: $white-color;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($color: #000, $alpha: 0.8);
+			h3 {
+				font : {
+					size: 1.3rem;
+					weight: 700;
+				}
+			}
+			p {
+				font-size: 0.8rem;
+			}
 
-            h3,
-            p {
-                margin: 0;
-                @include transitionBase(notHover, translateY(40px));
-            }
+			h3,
+			p {
+				margin: 0;
+				@include transitionBase(notHover, translateY(40px));
+			}
 
-            .small-divider {
-                height: 1px;
-                background-color: $white-color;
-                margin: 1.5rem auto;
-                width: 0;
-                @include transitionTeam();
-            }
-        }
+			.small-divider {
+				height: 1px;
+				background-color: $white-color;
+				margin: 1.5rem auto;
+				width: 0;
+				@include transitionTeam();
+			}
+		}
 
-        &_icon {
-            padding: 0;
-            opacity: 0;
-            cursor: pointer;
-            @include transitionBase(notHover, translateY(-40px));
-            i {
-                padding: 0 0.8rem;
-                font-size: 1.3rem;
-                &:hover {
-                    color: $secondary-color;
-                }
-            }
-        }
-    }
+		&_icon {
+			padding: 0;
+			opacity: 0;
+			cursor: pointer;
+			@include transitionBase(notHover, translateY(-40px));
+			i {
+				padding: 0 0.8rem;
+				font-size: 1.3rem;
+				&:hover {
+					color: $secondary-color;
+				}
+			}
+		}
+
+		@include maxWidth(767px) {
+			margin-inline: calc(min(2vw, 1rem));
+		}
+	}
 }

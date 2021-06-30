@@ -1,160 +1,221 @@
 .footer {
-    background-color: rgb(41, 41, 41);
-    color: $white-color;
-    padding-top: 2rem;
+	background-color: rgb(41, 41, 41);
+	color: $white-color;
+	padding-top: 2rem;
 
-    h3 {
-        font: {
-            size: fontSizeBase(0.4rem);
-            weight: 700;
-        }
-        margin: 1rem 0;
-    }
+	h3 {
+		font: {
+			size: fontSizeBase(0.4rem);
+			weight: 700;
+		}
+		margin: 1rem 0;
+	}
 
-    p {
-        font-size: fontSizeBase();
-        line-height: 1.8;
-    }
+	p {
+		font-size: fontSizeBase();
+		line-height: 1.8;
+	}
 
-    &-about_list {
-        text-align: left;
-        padding: 0rem;
-        li {
-            display: inline-block;
-            margin-right: 0.5rem;
-            border: 1px solid $secondary-color;
-            padding: 0.2rem;
-            a {
-                font-size: fontSizeBase();
-                @include colorTransitionBase();
-                padding: 1.2rem 0.5rem;
-            }
+	&-about_list {
+		text-align: left;
+		padding: 0rem;
+		li {
+			display: inline-block;
+			margin-right: 0.5rem;
+			border: 1px solid $secondary-color;
+			padding: 0.2rem;
+			a {
+				font-size: fontSizeBase();
+				@include colorTransitionBase();
+				padding: 1.2rem 0.5rem;
+			}
 
-            &:nth-child(1):hover {
-                @include listAboutFooter(rgb(38, 134, 213));
-            }
-            &:nth-child(2):hover {
-                @include listAboutFooter(rgb(91, 170, 235));
-            }
-            &:nth-child(3):hover {
-                @include listAboutFooter(rgb(22, 103, 169));
-            }
-            &:nth-child(4):hover {
-                @include listAboutFooter(rgb(218, 102, 25));
-            }
-        }
-    }
+			&:nth-child(1):hover {
+				@include listAboutFooter(rgb(38, 134, 213));
+			}
+			&:nth-child(2):hover {
+				@include listAboutFooter(rgb(91, 170, 235));
+			}
+			&:nth-child(3):hover {
+				@include listAboutFooter(rgb(22, 103, 169));
+			}
+			&:nth-child(4):hover {
+				@include listAboutFooter(rgb(218, 102, 25));
+			}
+		}
+	}
 
-    &-services_list {
-        text-align: left;
-        padding: 0rem;
-        li {
-            display: block;
-            a {
-                text-decoration: none;
-                font-size: fontSizeBase();
-                line-height: 2.5;
-                @include colorTransitionBase($white-color);
-            }
-            &:hover {
-                a {
-                    @include colorTransitionBase();
-                }
-            }
-        }
-    }
+	&-services_list {
+		text-align: left;
+		padding: 0rem;
+		li {
+			display: block;
+			a {
+				text-decoration: none;
+				font-size: fontSizeBase();
+				line-height: 2.5;
+				@include colorTransitionBase($white-color);
+			}
+			&:hover {
+				a {
+					@include colorTransitionBase();
+				}
+			}
+		}
+	}
 
-    &-gallery_img {
-        img {
-            display: inline-block;
-            width: 100 / 3 * 1% - 2%;
-            padding: 0.2rem 0.1rem;
-        }
-    }
+	&-gallery_img {
+		img {
+			display: inline-block;
+			width: 100 / 3 * 1% - 2%;
+			padding: 0.2rem 0.1rem;
+		}
+	}
 
-    &-form {
-        input {
-            width: 100%;
-            padding: 0.5rem 1rem;
-            margin-bottom: 1rem;
-            background-color: #111;
-            color: rgb(121, 117, 117);
-            border: 1px solid $white-color;
+	&-form {
+		input {
+			width: 100%;
+			padding: 0.5rem 1rem;
+			margin-bottom: 1rem;
+			background-color: #111;
+			color: rgb(121, 117, 117);
+			border: 1px solid $white-color;
 
-            &:focus {
-                outline: 1px solid $secondary-color;
-                border: 1px solid $secondary-color;
-            }
+			&:focus {
+				outline: 1px solid $secondary-color;
+				border: 1px solid $secondary-color;
+			}
 
-            &::placeholder {
-                color: #888;
-                font-size: fontSizeBase();
-            }
-        }
+			&::placeholder {
+				color: #888;
+				font-size: fontSizeBase();
+			}
+		}
 
-        button {
-            padding: 0.5rem 1.2rem;
-            background-color: #333;
-            outline: transparent;
-            border: 2px solid $secondary-color;
-            a {
-                text-align: center;
-                text-decoration: none;
-                font-size: fontSizeBase();
-                @include colorTransitionBase();
-            }
+		button {
+			padding: 0.5rem 1.2rem;
+			background-color: #333;
+			outline: transparent;
+			border: 2px solid $secondary-color;
+			a {
+				text-align: center;
+				text-decoration: none;
+				font-size: fontSizeBase();
+				@include colorTransitionBase();
+			}
 
-            &:hover {
-                border: 2px solid $secondary-color;
-                background-color: $secondary-color;
-                transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                a {
-                    @include colorTransitionBase($white-color);
-                }
-            }
-        }
-    }
+			&:hover {
+				border: 2px solid $secondary-color;
+				background-color: $secondary-color;
+				transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+				a {
+					@include colorTransitionBase($white-color);
+				}
+			}
+		}
+	}
 
-    // copyright
+	// copyright
 
-    &-section {
-        padding: 1rem;
-    }
+	&-section {
+		padding: 1rem;
+	}
 
-    .copyright {
-        background-color: rgb(26, 24, 24);
-        padding: 1.5rem 0;
-    }
+	.copyright {
+		background-color: rgb(26, 24, 24);
+		padding: 1.5rem 0;
+	}
 
-    &-copyright {
-        line-height: 1.5;
-        display: flex;
-        align-items: center;
+	&-copyright {
+		line-height: 1.5;
+		display: flex;
+		align-items: center;
 
-        &_text {
-            color: #888;
-            line-height: 2.5;
-            a {
-                text-decoration: none;
-                @include colorTransitionBase($white-color);
-                &:hover {
-                    @include colorTransitionBase();
-                }
-            }
-        }
+		&_text {
+			color: #888;
+			line-height: 2.5;
+			a {
+				text-decoration: none;
+				@include colorTransitionBase($white-color);
+				&:hover {
+					@include colorTransitionBase();
+				}
+			}
+		}
 
-        &_list {
-            position: relative;
-            display: inline-flex;
-            margin: 0;
-            list-style: none;
-            a {
-                text-decoration: none;
-                @include colorTransitionBase(#888);
-                &:hover {
-                    @include colorTransitionBase();
-                }
-            }
-        }
-    }
+		&_list {
+			position: relative;
+			display: inline-flex;
+			margin: 0;
+			list-style: none;
+			a {
+				text-decoration: none;
+				@include colorTransitionBase(#888);
+				&:hover {
+					@include colorTransitionBase();
+				}
+			}
+		}
+	}
+
+	@include maxWidth(767px) {
+		&-section {
+			margin: 0rem 1rem;
+		}
+
+		&-copyright {
+			text-align: center;
+			margin: 0;
+			&_list {
+				// right: -24px;
+				right: 10px;
+				transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+				a {
+					margin-right: 1rem;
+					font-size: 0.7rem;
+				}
+			}
+		}
+	}
+
+	@include minMaxWidth(768px, 992px) {
+		&-section {
+			margin: 0rem 0.5rem;
+		}
+
+		&-copyright {
+			margin-left: 1.4rem;
+			&_list {
+				left: -3vw;
+				transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+				a {
+					font-size: 0.8rem;
+					margin-right: 0.2rem;
+				}
+			}
+		}
+	}
+
+	@include minWidth(993px) {
+		&-section {
+			margin: 0rem 2.5rem;
+		}
+
+		&-copyright {
+			margin: 0;
+
+			&_text {
+				margin: 0 0 0 3.3rem;
+			}
+
+			&_list {
+				right: -8px;
+				transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+				a {
+					margin-right: 2rem;
+					font-size: 0.8rem;
+				}
+			}
+		}
+	}
 }

@@ -1,15 +1,46 @@
-
-
 .section-padding {
-    margin-bottom: 1.8rem;
-    overflow: visible;
+	margin-bottom: 1.8rem;
+	overflow: visible;
+	.section-header {
+		text-align: center;
+		margin-bottom: 4vw;
+		h2 {
+			font-weight: 700;
+			letter-spacing: 2px;
+		}
+	}
+	@include maxWidth(767px) {
+		padding: 2rem 0rem;
+		.section-header {
+			margin-bottom: 8vw !important;
+			h4 {
+				font-size: 1.5rem;
+				margin-bottom: 2rem;
+			}
+		}
+	}
 
-    .section-header {
-        text-align: center;
-        margin-bottom: 4vw;
-        h2 {
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-    }
+	@include minMaxWidth(768px, 992px) {
+		padding: 2rem 0;
+		.section-header {
+			h4 {
+				font-size: 1.8rem;
+			}
+		}
+	}
+
+	@include minWidth(993px) {
+		padding: 3rem 4rem;
+		.section-header {
+			h4 {
+				font-size: 2.5rem;
+			}
+		}
+	}
+}
+
+#header-wrap {
+	.section-padding {
+		padding: 0 !important;
+	}
 }

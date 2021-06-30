@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Helium</title>
     <!-- font Icon -->
     <link rel="stylesheet" href="./fontIcon/fontawesome-free-5.15.1-web/css/all.min.css">
     <!-- Font  -->
@@ -52,15 +52,23 @@
         <nav class="navbar">
             <div class="container">
                 <div class="navbar-header">
-                    <div class="navbar-brand">
-                        <a href="#">
-                            <img src="./img2/logo.png" alt="">
-                        </a>
+                    <div class="navbar-top">
+                        <div class="navbar-brand">
+                            <a href="#">
+                                <img src="./img2/logo.png" alt="">
+                            </a>
+                        </div>
+                        <button class="btn navbar-button btn_menu">
+                            <i class="fas fa-bars btn-icon"></i>
+                        </button>
+                        <button class="btn navbar-button btn_close">
+                            <i class="fas fa-times btn-icon"></i>
+                        </button>
                     </div>
                     <div class="navbar-collapse">
                         <ul class="navbar-collapse_ul">
-                            <li class="active">
-                                <a href="#head-page">Home</a>
+                            <li>
+                                <a class="active" href="#Home">Home</a>
                             </li>
                             <li>
                                 <a href="#about">About</a>
@@ -85,42 +93,11 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="btn navbar-button">
-                        <i class="fas fa-bars"></i>
-                    </button>
                 </div>
-            </div>
-            <div class="menu-moblie">
-                <ul class="navbar-collapse_ul">
-                    <li class="active">
-                        <a href="#head-page">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#features">Features</a>
-                    </li>
-                    <li>
-                        <a href="#team">Team</a>
-                    </li>
-                    <li>
-                        <a href="#pricing">Pricing</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
             </div>
         </nav>
         <!-- slider -->
-        <div class="header-slider">
+        <div class="header-slider section-padding" id="Home">
             <div class="container-fluid">
                 <div class="header-slider_area">
                     <div class="header-slider_content">
@@ -129,19 +106,20 @@
                         </div>
                         <div class="header-slider_img" id="firstSlides">
                             <img src="./img2/bg-1.jpg" alt="">
-
                             <div class="header-slider_caption">
                                 <h2 class="fadeDown">Helium - Bootstrap 4 UI Kit</h2>
                                 <p class="fade">
                                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit
                                     Curabitur ultricies nisi Nam eget dui. Etiam rhoncus
                                 </p>
-                                <a href="#" class="btn-downLoad fadeUp ">
-                                    DownLoad
-                                </a>
-                                <a href="#" class="btn-learnMore fadeUp ">
-                                    Learn More
-                                </a>
+                                <div class="btn-slider">
+                                    <a href="#" class="btn-downLoad fadeUp ">
+                                        DownLoad
+                                    </a>
+                                    <a href="#" class="btn-learnMore fadeUp ">
+                                        Learn More
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="header-slider_img">
@@ -152,9 +130,11 @@
                                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit
                                     Curabitur ultricies nisi Nam eget dui. Etiam rhoncus
                                 </p>
+                                <div class="btn-slider">
                                 <a href="#" class="btn-downLoad">
                                     DownLoad
                                 </a>
+                                </div>
                             </div>
                         </div>
                         <div class="header-slider_img" id="lastSlides">
@@ -165,12 +145,15 @@
                                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit
                                     Curabitur ultricies nisi Nam eget dui. Etiam rhoncus
                                 </p>
-                                <a href="#" class="btn-learnMore">
-                                    Get Started
-                                </a>
-                                <a href="#" class="btn-downLoad">
-                                    DownLoad
-                                </a>
+                                <div class="btn-slider">
+
+                                    <a href="#" class="btn-learnMore">
+                                        Get Started
+                                    </a>
+                                    <a href="#" class="btn-downLoad">
+                                        DownLoad
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="header-slider_img" id="firstClone">
@@ -378,7 +361,7 @@
         -->
 
     <!-- Portfolio -->
-    <section class="section-padding portfolio-scroll">
+    <section class="section-padding portfolio-scroll" id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -397,8 +380,8 @@
                         <a href="#!" class="portfolio-list_items" data-filter='.research'>Research</a>
                     </div>
                 </div>
-                <div id="portfolio" class="row">
-                    <div class="col-lg-4 col-sm-6 col-xs-12 marketing plan portfolio-item_wrap"
+                <div id="portfolios" class="row">
+                    <div class="col-lg-4 col-sm-12 marketing plan portfolio-item_wrap"
                         data-category="transition">
                         <div class="portfolio-item">
                             <div class="portfolio-item_img">
@@ -421,7 +404,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 col-xs-12 brand plan portfolio-item_wrap" data-category="metalloid">
+                    <div class="col-lg-4 col-sm-12 brand plan portfolio-item_wrap" data-category="metalloid">
                         <div class="portfolio-item">
                             <div class="portfolio-item_img">
                                 <img src="./img2/portfolioImg2.jpg" alt="">
@@ -443,7 +426,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 col-xs-12 brand research portfolio-item_wrap"
+                    <div class="col-lg-4 col-sm-12 brand research portfolio-item_wrap"
                         data-category="metalloid">
                         <div class="portfolio-item">
                             <div class="portfolio-item_img">
@@ -466,7 +449,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 col-xs-12 marketing research portfolio-item_wrap"
+                    <div class="col-lg-4 col-sm-12 marketing research portfolio-item_wrap"
                         data-category="transition">
                         <div class="portfolio-item">
                             <div class="portfolio-item_img">
@@ -489,7 +472,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 col-xs-12 marketing plan portfolio-item_wrap"
+                    <div class="col-lg-4 col-sm-12 marketing plan portfolio-item_wrap"
                         data-category="post-transition">
                         <div class="portfolio-item">
                             <div class="portfolio-item_img">
@@ -512,7 +495,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 col-xs-12 plan research portfolio-item_wrap"
+                    <div class="col-lg-4 col-sm-12 plan research portfolio-item_wrap"
                         data-category="transition">
                         <div class="portfolio-item">
                             <div class="portfolio-item_img">
@@ -1213,7 +1196,7 @@
     <a href="#" class="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </a>
-
+    <div class="abc"></div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>

@@ -1,44 +1,80 @@
 #features {
-    .features-item {
-        display: flex;
-        flex-direction: row-reverse;
-        margin-bottom: 2rem;
-        &_content {
-            h4 {
-                text-decoration: none;
-                font-weight: 700;
-                color: #444;
-                &:hover {
-                    color: $secondary-color;
-                    transition: all 0.2s cubic-bezier(0.755, 0.05, 0.855, 0.06);
-                }
-            }
-            p {
-                line-height: 1.8;
-                font-size: 0.8rem;
-            }
-        }
+	.features-item {
+		display: flex;
+		flex-direction: row-reverse;
+		margin-bottom: 2rem;
+		&_content {
+			h4 {
+				text-decoration: none;
+				font-weight: 700;
+				color: #444;
+				&:hover {
+					color: $secondary-color;
+					transition: all 0.2s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+				}
+			}
+			p {
+				line-height: 1.8;
+				font-size: 0.8rem;
+			}
+		}
 
-        &_icon {
-            border-radius: 10px;
-            border: 1px solid rgba($color: #8c8e91, $alpha: 0.3);
-            padding-top: 1rem;
-            height: 60px;
-            width: 175px;
-            text-align: center;
-            i {
-                color: $secondary-color;
-                font-size: 1.2rem;
-            }
-        }
-    }
+		&_icon {
+			border-radius: 10px;
+			border: 1px solid rgba($color: #8c8e91, $alpha: 0.3);
+			padding-top: 1rem;
+			height: 60px;
+			width: 175px;
+			text-align: center;
+			i {
+				color: $secondary-color;
+				font-size: 1.2rem;
+			}
+		}
+	}
 
-    .features-item:hover .features-item_icon {
-        background-color: $secondary-color;
-        transition: all 0.2s cubic-bezier(0.755, 0.05, 0.855, 0.06);
-        i {
-            color: $white-color;
-            transition: all 0.2s cubic-bezier(0.755, 0.05, 0.855, 0.06);
-        }
-    }
+	.features-item:hover .features-item_icon {
+		background-color: $secondary-color;
+		transition: all 0.2s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+		i {
+			color: $white-color;
+			transition: all 0.2s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+		}
+	}
+	@include maxWidth(767px) {
+		.features-item {
+			&_content {
+				padding: 0px 4vw;
+				h4 {
+					font-size: 0.8rem;
+				}
+			}
+		}
+	}
+
+	@include minMaxWidth(768px, 992px) {
+		.features-item {
+			&_content {
+				padding: 0px 3vw;
+				h4 {
+					font-size: 0.8rem;
+				}
+			}
+		}
+	}
+
+	@include minWidth(993px) {
+		.features-item {
+			&_content {
+				padding: 0px 2vw;
+				h4 {
+					font-size: 1rem;
+				}
+			}
+			&_icon {
+				height: 5vw;
+				width: 15vw;
+			}
+		}
+	}
 }

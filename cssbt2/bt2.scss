@@ -1,33 +1,29 @@
+@import 'helpers/mixin';
+@import 'helpers/variables';
+@import 'helpers/function';
 
-@import "helpers/mixin";
-@import "helpers/variables";
-@import "helpers/function";
+@import 'layout/structure';
+@import 'layout/header';
+@import 'layout/about';
+@import 'layout/service';
+@import 'layout/portfolio';
+@import 'layout/features';
+@import 'layout/counter';
+@import 'layout/team';
+@import 'layout/pricing';
 
-@import "_responBt2.scss";
+@import 'components/carousel';
+@import 'components/button';
 
-@import "layout/structure";
-@import "layout/header";
-@import "layout/about";
-@import "layout/service";
-@import "layout/portfolio";
-@import "layout/features";
-@import "layout/counter";
-@import "layout/team";
-@import "layout/pricing";
+@import 'layout/footer';
 
-@import "components/carousel";
-@import "components/button";
-
-@import "layout/footer";
-
-@import "pages/contact";
-@import "pages/start";
-
+@import 'pages/contact';
+@import 'pages/start';
 
 *,
 ::after,
 ::before {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 h1,
@@ -35,22 +31,22 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 img {
-    max-width: 100%;
+	max-width: 100%;
 }
 
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    color: #444;
-    font-family: "Rubik", sans-serif;
-    font-size: 16px;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	color: #444;
+	font-family: 'Rubik', sans-serif;
+	font-size: 16px;
 }
